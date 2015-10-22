@@ -1,16 +1,21 @@
 import webbrowser
 
 class Movie():
-	"""docstring for Media"""
+	"""Movie class.
 
-	VALID_RATINGS=['PG','PG13','R'] #class variables
-	def __init__(self, movie_title, movie_story, poster_image_url, trailer_youtube_url):
-		#super(Movie, self).__init__()
-		self.title = movie_title	#instance variable
-		self.movie_story = movie_story
+	Describes attributes of a movie.
+
+	Attributes:
+		title: movie title.
+		poster_image_url: url for movie poster poster_image.
+		trailer_youtube_url: url for movie trailer.
+		movie_stars: string of stars in the movie.
+	"""
+
+	# class constructor
+	def __init__(self, movie_title, poster_image_url, trailer_youtube_url, movie_stars):
+		#instance variables
+		self.title = movie_title	
 		self.poster_image_url = poster_image_url
 		self.trailer_youtube_url = trailer_youtube_url
-
-	def show_trailer(self):
-		webbrowser.open(self.trailer_youtube)
-		
+		self.movie_stars = movie_stars
