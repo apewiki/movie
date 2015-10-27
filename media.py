@@ -1,7 +1,7 @@
 import webbrowser
 
 
-class Movie():
+class Movie(object):
 	"""Movie class.
 
     Describes attributes of a movie.
@@ -16,6 +16,8 @@ class Movie():
 	def __init__(
 			self, movie_title, poster_image_url,
 			trailer_youtube_url, movie_stars):
+		"""returns a Movie object with all its attributes
+		assigned to arguments passed in"""
 		self.title = movie_title
 		self.poster_image_url = poster_image_url
 		self.trailer_youtube_url = trailer_youtube_url
